@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Outfit Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #6200ea;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background: linear-gradient(to right, #6200ea, #03dac6);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .hero button {
+            background: #03dac6;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        .feature-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .feature {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 250px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .feature:hover {
+            transform: scale(1.05);
+        }
+        .feature:nth-child(1) {
+            background-color: #ffcc80;
+        }
+        .feature:nth-child(2) {
+            background-color: #80deea;
+        }
+        .feature:nth-child(3) {
+            background-color: #ff8a80;
+        }
+        footer {
+            background: #6200ea;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>AI Outfit Planner</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Smart AI Outfit Suggestions for Every Occasion</h2>
+            <p>Upload your wardrobe and let AI help you dress smartly every day.</p>
+            <button onclick="scrollToSection('features')">Get Started</button>
+        </div>
+    </section>
+
+    <section id="features">
+        <h2>Key Features</h2>
+        <div class="feature-grid">
+            <div class="feature">
+                <h3>AI-Powered Recommendations</h3>
+                <p>Get the best outfit suggestions based on weather, occasion, and style.</p>
+            </div>
+            <div class="feature">
+                <h3>Wardrobe Management</h3>
+                <p>Upload, categorize, and organize your wardrobe easily.</p>
+            </div>
+            <div class="feature">
+                <h3>Smart Shopping</h3>
+                <p>Receive AI-driven suggestions for missing fashion essentials.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>AI Outfit Planner is designed to simplify your fashion choices with cutting-edge AI technology.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: support@aioutfitplanner.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 AI Outfit Planner. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const heroButton = document.querySelector(".hero button");
+            heroButton.addEventListener("mouseover", function () {
+                heroButton.style.backgroundColor = "#ff4081";
+                heroButton.style.color = "white";
+            });
+            heroButton.addEventListener("mouseout", function () {
+                heroButton.style.backgroundColor = "#03dac6";
+                heroButton.style.color = "black";
+            });
+        });
+    </script>
+</body>
+</html>
